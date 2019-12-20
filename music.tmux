@@ -13,6 +13,17 @@ album_interpolation="\#{album}"
 track_interpolation="\#{track}"
 status_interpolation="\#{music_status}"
 
+#Backwards compatibility
+spotify_artist=artist
+spotify_album=album
+spotify_track=track
+spotify_status=music_status
+
+spotify_artist_interpolation=artist_interpolation
+spotify_album_interpolation=album_interpolation
+spotify_track_interpolation=track_interpolation
+spotify_status_interpolation=status_interpolation
+
 do_interpolation() {
   local output="$1"
   local output="${output/$artist_interpolation/$artist}"
