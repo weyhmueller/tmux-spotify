@@ -1,26 +1,26 @@
 # Tmux Spotify Plugin
 
-Tmux plugin that shows the current spotify status in your statusline
+Tmux plugin that shows the current music status for Spotify, Apple Music, or iTunes in your statusline
 
 Introduces the following new status variables:
 
-* `#{spotify_status}`
-* `#{spotify_artist}`
-* `#{spotify_album}`
-* `#{spotify_track}`
+* `#{music_status}`
+* `#{_artist}`
+* `#{album}`
+* `#{track}`
 
 ### Usage
 
 The following interpolations are made available for your statusline:
 
-* `#{spotify_status}` - Spotify status icons
-* `#{spotify_artist}` - Current artist
-* `#{spotify_album}`  - Current album
-* `#{spotify_track}`  - Current track
+* `#{music_status}` - Spotify status icons
+* `#{artist}` - Current artist
+* `#{album}`  - Current album
+* `#{track}`  - Current track
 
 Here's the example in `.tmux.conf`:
 
-    set -g status-right "♫ #{spotify_status} #{spotify_artist}: #{spotify_track} | %a %h-%d %H:%M "
+    set -g status-right "♫ #{music_status} #{artist}: #{track} | %a %h-%d %H:%M "
 
 Customize the icons with:
 
@@ -50,7 +50,7 @@ Clone the repo:
 
 Add this line to the bottom of `.tmux.conf`:
 
-    run-shell ~/clone/path/spotify.tmux
+    run-shell ~/clone/path/music.tmux
 
 Reload TMUX environment:
 

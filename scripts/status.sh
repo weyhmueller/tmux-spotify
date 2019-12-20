@@ -10,12 +10,12 @@ stopped_icon=""
 playing_default="▶︎"
 paused_default="■"
 
-spotify_status() {
-read -r -d '' SCRIPT <<'END'
-set theApp to "Spotify"
+music_status() {
+read -r -d '' SCRIPT <<END
+set theApp to "$APP"
 
 if application theApp is running then
-  tell application "Spotify"
+  tell application "$APP"
     return player state as string
   end tell
 end if
@@ -24,8 +24,8 @@ END
 osascript -e "${SCRIPT}"
 }
 
-print_spotify_status() {
-  local status=$(spotify_status)
+print_music_status() {
+  local status=$(music_status)
 
   if [[ "$status" == "playing" ]]; then
     echo "${playing_icon}"
@@ -44,7 +44,7 @@ update_status_icon() {
 
 main() {
   update_status_icon
-  print_spotify_status
+  print_music_status
 }
 
 main
