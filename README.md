@@ -30,6 +30,14 @@ Customize the icons with:
     # optional: defaults to `paused_icon`
     set -g @spotify_stopped_icon "X"
 
+By default Spotify is used as the media source.  iTunes or Apple Music can be used by setting `MUSIC_APP` in
+your `bashrc`
+```
+# set tmux-spotify to use Apple Music instead of Spotify
+export MUSIC_APP="Music"
+```
+set `MUSIC_APP` to `iTunes` instead on macOS<Catalina
+
 ### Screenshots
 
 ![status](/screenshots/spotify-status.png)<br/>
