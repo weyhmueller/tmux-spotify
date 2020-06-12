@@ -3,13 +3,12 @@
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/helpers.sh"
 
-print_spotify_album() {
-  current_track_property "album"
+print_artist() {
+  current_property "artist" $APP
 }
 
 main() {
-  print_spotify_album
+  print_artist
 }
 
 main
-
